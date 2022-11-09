@@ -1,16 +1,19 @@
 import * as React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from './home';
 import AuthScreens from './auth';
+import AuthContainer from '../components/auth';
+import {NavigationContainer} from '@react-navigation/native';
 
 const Stack = createNativeStackNavigator();
 
 function StackNavigatorComponent() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="About" component={AuthScreens} />
-    </Stack.Navigator>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={AuthContainer} />
+        <Stack.Screen name="About" component={AuthScreens} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

@@ -1,3 +1,8 @@
+plugins {
+    id 'com.android.application'
+    // Add the Google services Gradle plugin
+    id 'com.google.gms.google-services'
+}
 apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
@@ -92,6 +97,7 @@ apply from: "../../node_modules/react-native/react.gradle"
  * Upload all the APKs to the Play Store and people will download
  * the correct one based on the CPU architecture of their device.
  */
+
 def enableSeparateBuildPerCPUArchitecture = false
 
 /**
@@ -246,11 +252,6 @@ android {
 
         }
     }
-}
-plugins {
-  id 'com.android.application'
-  // Add the Google services Gradle plugin
-  id 'com.google.gms.google-services'
 }
 
 dependencies {

@@ -29,6 +29,13 @@
             {
               "client_id": "344506991921-n6j1be6oabg8vldee50akkrg1vaoksks.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "344506991921-0pvbhiv1eqmsgr5k0r0o4gugeodim7v9.apps.googleusercontent.com",
+              "client_type": 3,
+              "ios_info": {
+                "bundle_id": "com.productManagement"
+              }
             }
           ]
         }
