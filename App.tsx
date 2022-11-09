@@ -1,11 +1,16 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
+import {store, persists} from './src/redux/store';
+import StackNavigatorComponent from './src/screens';
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persists}>
+        <StackNavigatorComponent />
+      </PersistGate>
+    </Provider>
   );
 };
 
