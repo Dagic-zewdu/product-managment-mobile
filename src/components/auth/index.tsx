@@ -1,10 +1,11 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-
+import {View} from 'react-native';
+import styles from './style';
+import SignInWithGoogle from './google';
 const AuthContainer = () => {
   return (
-    <View>
-      <Text>AuthContainer</Text>
+    <View style={styles.container}>
+      <SignInWithGoogle />
     </View>
   );
 };

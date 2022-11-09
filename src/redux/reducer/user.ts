@@ -10,7 +10,6 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {},
-  extraReducers: builder => {},
 });
 const userReducer = userSlice.reducer;
 export default userReducer;
