@@ -247,15 +247,20 @@ android {
         }
     }
 }
+plugins {
+  id 'com.android.application'
+  // Add the Google services Gradle plugin
+  id 'com.google.gms.google-services'
+}
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-
+    implementation platform('com.google.firebase:firebase-bom:31.0.2')
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
-
+    implementation 'com.google.firebase:firebase-analytics'
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
     }
